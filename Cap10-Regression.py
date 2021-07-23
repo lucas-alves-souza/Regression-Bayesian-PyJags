@@ -69,7 +69,7 @@ except ImportError:
     sys.exit(1)
 
 print('Number of posterior samples is {}'.format(postsamples.shape[0]))
-print(beta1d)
+ 
 fig = corner.corner(postsamples, labels=[r"$\beta_1$", r"$\beta_0$"], color='r', smooth=1, 
                         levels=(0.6,0.96),plot_density=0, fill_contours=10, plot_datapoints=1,
                         truths=[beta1d, beta0d],  show_titles=True, title_kwargs={"fontsize": 13})
